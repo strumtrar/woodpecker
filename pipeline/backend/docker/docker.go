@@ -59,7 +59,7 @@ func New() backend.Engine {
 }
 
 func (e *docker) Name() string {
-	return "docker"
+	return "docker --net=host"
 }
 
 func (e *docker) IsAvailable(context.Context) bool {
